@@ -1,10 +1,11 @@
 import datetime
+from typing import Optional
 
 from pydantic import BaseModel
 
 
 class Inbox(BaseModel):
-    id: int
+    id: Optional[int] = None
     name: str
     code: str
     created_at: datetime.datetime

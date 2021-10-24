@@ -21,8 +21,8 @@ class InboxRepository(BaseRepository):
             return None
         return Inbox.parse_obj(user)
 
-    async def created(self, data: InboxIn) -> Inbox:
-        frame = Inbox(name=data.name, code=data.code)
+    async def created(self, data: dict) -> Inbox:
+        frame = Inbox(name=data["filename"], code=data["code"], created_at=datetime.now())
 
         values = {**frame.dict()}
         values.pop("id", None)

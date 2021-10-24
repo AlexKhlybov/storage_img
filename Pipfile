@@ -15,6 +15,7 @@ bcrypt = "*"
 python-jose = "*"
 isort = "*"
 black = "*"
+python-multipart = "*"
 
 [dev-packages]
 
