@@ -140,3 +140,4 @@ dmypy.json
 /public/static/*
 !/public/static/.gitkeep
 tmp
+.code-workspace
