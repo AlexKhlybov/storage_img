@@ -34,9 +34,11 @@ async def create_frame(
     return frame_list
 
 
-@router.delete("/{frame_id}")
+@router.delete("/{id}")
 async def delete_frame(id: int, frames: InboxRepository = Depends(get_frame_repository)):
     frame = await frames.get_by_id(id=id)
+    from icecream import ic
+
     if frame is None:
         return HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Not found frame")
     delete_file(frame)

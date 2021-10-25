@@ -1,7 +1,6 @@
 import os
 import uuid
 from datetime import datetime
-from typing import List
 
 from fastapi.param_functions import File
 

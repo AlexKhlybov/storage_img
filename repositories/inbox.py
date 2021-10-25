@@ -1,10 +1,8 @@
 from datetime import datetime
 from typing import List, Optional
 
-from core.security import hash_password
 from db.inbox import inbox
-from db.users import users
-from models.inbox import Inbox, InboxIn
+from models.inbox import Inbox
 
 from .base import BaseRepository
 

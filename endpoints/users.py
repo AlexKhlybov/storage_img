@@ -1,7 +1,6 @@
 from typing import List
 
 from fastapi import APIRouter, Depends, HTTPException, status
-from sqlalchemy.sql.schema import PrimaryKeyConstraint
 
 from models.user import User, UserIn
 from repositories.users import UserRepository
@@ -21,7 +20,7 @@ async def create_user(user: UserIn, users: UserRepository = Depends(get_user_rep
     return await users.created(u=user)
 
 
-@router.put("/{user_id}", response_model=User, response_model_exclude={"hashed_password"})
+@router.put("/{id}", response_model=User, response_model_exclude={"hashed_password"})
 async def update_user(
     id: int,
     user: UserIn,

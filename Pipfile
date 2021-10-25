@@ -14,8 +14,13 @@ pydantic = {extras = ["email"], version = "*"}
 bcrypt = "*"
 python-jose = "*"
 isort = "*"
-black = "*"
 python-multipart = "*"
+aiosqlite = "*"
+pytest = "*"
+requests = "*"
+icecream = "*"
+coverage = "*"
+pytest-cov = "*"
 
 [dev-packages]
 

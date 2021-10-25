@@ -3,7 +3,6 @@ from starlette import status
 
 from core.security import JWTBearer, decode_access_token
 from db.base import database
-from models.inbox import Inbox
 from models.user import User
 from repositories.inbox import InboxRepository
 from repositories.users import UserRepository
