@@ -1,6 +1,14 @@
 import pytest
 
-from core.security import create_access_token
+from starlette.testclient import TestClient
+
+from main import app
+
+
+@pytest.fixture
+def test_client():
+    with TestClient(app) as client:
+        yield client
 
 
 @pytest.fixture()
